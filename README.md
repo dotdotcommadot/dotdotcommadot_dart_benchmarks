@@ -1,5 +1,5 @@
 # dotdotcommadot dart benchmarks
-###### Version: 0.0.1 -- alpha
+###### Version: 0.0.2
 
 ## About
 The main goal of this library is to compare different writing styles to each other.
@@ -25,46 +25,26 @@ There are mainly three important ways of running the app:
 Following results are run from my machine.
 This is a Windows 7, 64 bit machine with 16 gb of RAM.
 
-- ForeachClazz
-    - Native Dart VM: 2239 ms
-    - Dartium: 1893 ms
-    - Chrome: 2406 ms
-- ForeachInt
-    - Native Dart VM: 2249 ms
-    - Dartium: 2010 ms
-    - Chrome: 2310 ms
-- ForLoopClazz
-    - Native Dart VM: 905 ms
-    - Dartium: 896 ms
-    - Chrome: 999 ms
-- ForLoopInt
-    - Native Dart VM: 853 ms
-    - Dartium: 902 ms	
-    - Chrome: 937 ms
-- NoOperatorOverloading
-    - Native Dart VM: 2184 ms
-    - Dartium: 10634
-    - Chrome: 18366 ms
-- OperatorOverloading
-    - Native Dart VM: 2179 ms
-    - Dartium: 10432	
-    - Chrome: 2968 ms
-- StringConcatenationInterpolation
-    - Native Dart VM: 125058 ms
-    - Dartium: 148928	
-    - Chrome: 916 ms
-- StringConcatenationPlusOperator
-    - Native Dart VM: 432000 ms
-    - Dartium: 656750	
-    - Chrome: 919 ms
-- StrongTyping
-    - Native Dart VM: 30636 ms
-    - Dartium: 30393 ms
-    - Chrome: 99095 ms
-- WeakTyping
-    - Native Dart VM: 31000 ms
-    - Dartium: 30223 ms
-    - Chrome: 107526 ms
+All results are in milliseconds.
+The lower the number, the faster it's running.
+
+Benchmark | Standalone Dart VM | Dartium (Dart) | Google Chrome (JS)
+--- | --- | ---
+ForeachClazz | 2706 | 1800 | 1905
+ForeachInt | 2005 | 1793 | 2184
+ForLoopClazz | 868 | 851 | 929
+ForLoopInt | 802 | 842 | 971
+NoOperatorOverloading | 2056 | 10070 | 18422
+OperatorOverloading | 2047 | 9950 | 3078
+StringConcatenationAdjacentLiteral | 573 | 606 | 900
+StringConcatenationInterpolation | 118235 | 136400 | 896
+StringConcatenationPlusOperator | 403400 | 640500 | 905
+StringConcatenationPlusOperatorLiteral | 438000 | 640250 | 886
+StringConcatenationStringBuffer | 418800 | 539250 | 157307
+StrongTyping | 27243 | 29231 | 92727
+WeakTyping | 27438 | 29275 | 101550
+
+
     
 ## Conclusions
 #### Loops
