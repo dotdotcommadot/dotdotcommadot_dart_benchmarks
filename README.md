@@ -29,7 +29,7 @@ All results are in milliseconds.
 The lower the number, the faster it's running.
 
 Benchmark | Standalone Dart VM | Dartium (Dart) | Google Chrome (JS)
---- | --- | ---
+--------- | ------------------ | -------------- | -----------------
 ForeachClazz | 2706 | 1800 | 1905
 ForeachInt | 2005 | 1793 | 2184
 ForLoopClazz | 868 | 851 | 929
