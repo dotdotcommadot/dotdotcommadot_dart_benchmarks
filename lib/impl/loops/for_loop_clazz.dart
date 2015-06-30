@@ -3,26 +3,32 @@ part of benchmarks;
 class ForLoopClazz extends BenchmarkBase
 {
 	static const int ITERATIONS 	= 100000;
-	final List<Clazz> myClazzes 	= [];
+	List<Clazz> sourceList 	= [];
+  List<Clazz> targetList	= [];
 	
 	ForLoopClazz() : super("ForLoopClazz");
-	
+
+  @override
 	void setup() 
-  { 
-		for (int i = 0; i< ITERATIONS; i++)
-    {
-			myClazzes.add(new Clazz(i));
-    }
-  }
-	
-	void run() 
   {
-    for (int i = 0; i < myClazzes.length; i++)
+		for (int i = 0; i < ITERATIONS; i++)
     {
-    	var e = myClazzes[i];
+      sourceList.add(new Clazz(i));
     }
   }
 
+  @override
+	void run() 
+  {
+    targetList	= [];
+
+    for (int i = 0; i < sourceList.length; i++)
+    {
+      targetList.add(sourceList[i]);
+    }
+  }
+
+  @override
   void teardown() 
   { 
   }

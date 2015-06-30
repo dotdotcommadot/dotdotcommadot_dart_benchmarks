@@ -3,26 +3,32 @@ part of benchmarks;
 class ForeachClazz extends BenchmarkBase
 {
 	static const int ITERATIONS 	= 100000;
-	final List<Clazz> myClazzes		= new List();
+	List<Clazz> sourceList 	= [];
+	List<Clazz> targetList	= [];
 	
 	ForeachClazz() : super("ForeachClazz");
-	
+
+	@override
 	void setup() 
-  { 
-		for (int i = 0; i< ITERATIONS; i++)
+  {
+		for (int i = 0; i < ITERATIONS; i++)
     {
-			myClazzes.add(new Clazz(i));
+			sourceList.add(new Clazz(i));
     }
   }
-	
+
+	@override
 	void run() 
   {
-		myClazzes.forEach((myClazz)
+		targetList	= [];
+
+		sourceList.forEach((myClazz)
 		{
-    	var e = myClazz;
+			targetList.add(myClazz);
 		});
   }
 
+	@override
   void teardown() 
   { 
   }

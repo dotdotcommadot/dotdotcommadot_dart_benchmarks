@@ -3,26 +3,32 @@ part of benchmarks;
 class ForeachInt extends BenchmarkBase
 {
 	static const int ITERATIONS 	= 100000;
-	final List<int> list 					= new List();
-	
+  List<int> sourceList 	= [];
+  List<int> targetList	= [];
+
 	ForeachInt() : super("ForeachInt");
-	
+
+  @override
 	void setup() 
-  { 
-		for (int i = 0; i< ITERATIONS; i++)
+  {
+		for (int i = 0; i < ITERATIONS; i++)
     {
-    	list.add(i);
+      sourceList.add(i);
     }
   }
-	
+
+  @override
 	void run() 
   {
-    list.forEach((i)
+    targetList	= [];
+
+    sourceList.forEach((myInt)
 		{
-    	var e = i;
+      targetList.add(myInt);
 		});
   }
 
+  @override
   void teardown() 
   { 
   }
