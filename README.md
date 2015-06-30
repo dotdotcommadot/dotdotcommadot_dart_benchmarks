@@ -1,5 +1,5 @@
 # dotdotcommadot dart benchmarks
-###### Version: 0.0.2
+###### Version: 0.0.3
 
 ## About
 The main goal of this library is to compare different writing styles to each other.
