@@ -4,10 +4,14 @@ import 'package:benchmark_harness/benchmark_harness.dart';
 
 part 'package:benchmarks/api/clazz.dart';
 
-part 'package:benchmarks/impl/loops/for_loop_int.dart';
+part 'package:benchmarks/impl/loops/for_in_loop_clazz.dart';
+part 'package:benchmarks/impl/loops/for_in_loop_int.dart';
 part 'package:benchmarks/impl/loops/for_loop_clazz.dart';
-part 'package:benchmarks/impl/loops/foreach_int.dart';
+part 'package:benchmarks/impl/loops/for_loop_int.dart';
 part 'package:benchmarks/impl/loops/foreach_clazz.dart';
+part 'package:benchmarks/impl/loops/foreach_int.dart';
+part 'package:benchmarks/impl/loops/while_loop_clazz.dart';
+part 'package:benchmarks/impl/loops/while_loop_int.dart';
 
 part 'package:benchmarks/impl/operator_overloading/no_operator_overloading.dart';
 part 'package:benchmarks/impl/operator_overloading/operator_overloading.dart';
@@ -24,11 +28,15 @@ part 'package:benchmarks/impl/typing/weak_typing.dart';
 main()
 {
 	// Loops
-	new ForeachClazz().report();
-	new ForeachInt().report();
+	new ForInLoopClazz().report();
+	new ForInLoopInt().report();
 	new ForLoopClazz().report();
 	new ForLoopInt().report();
-	
+	new ForeachClazz().report();
+	new ForeachInt().report();
+	new WhileLoopClazz().report();
+	new WhileLoopInt().report();
+
 	// Operator Overloading
 	new NoOperatorOverloading().report();
 	new OperatorOverloading().report();
