@@ -7,7 +7,8 @@ class OperatorOverloading extends BenchmarkBase
 	final Clazz myClazz 					= new Clazz(666);
 	
 	OperatorOverloading() : super("OperatorOverloading");
-	
+
+  @override
 	void setup() 
   { 
 		for (int i = 0; i< ITERATIONS; i++)
@@ -15,7 +16,8 @@ class OperatorOverloading extends BenchmarkBase
 			myClazzes.add(new Clazz(i));
     }
   }
-	
+
+  @override
 	void run() 
   {
     for (int i = 0; i < myClazzes.length; i++)
@@ -24,6 +26,7 @@ class OperatorOverloading extends BenchmarkBase
     }
   }
 
+  @override
   void teardown() 
   { 
   }
