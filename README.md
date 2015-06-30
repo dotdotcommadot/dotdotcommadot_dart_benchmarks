@@ -30,19 +30,27 @@ The lower the number, the faster it's running.
 
 Benchmark | Standalone Dart VM | Dartium (Dart) | Google Chrome (JS)
 --------- | ------------------ | -------------- | -----------------
-ForeachClazz | 2706 | 1800 | 1905
-ForeachInt | 2005 | 1793 | 2184
-ForLoopClazz | 868 | 851 | 929
-ForLoopInt | 802 | 842 | 971
-NoOperatorOverloading | 2056 | 10070 | 18422
-OperatorOverloading | 2047 | 9950 | 3078
-StringConcatenationAdjacentLiteral | 573 | 606 | 900
-StringConcatenationInterpolation | 118235 | 136400 | 896
-StringConcatenationPlusOperator | 403400 | 640500 | 905
-StringConcatenationPlusOperatorLiteral | 438000 | 640250 | 886
-StringConcatenationStringBuffer | 418800 | 539250 | 157307
-StrongTyping | 27243 | 29231 | 92727
-WeakTyping | 27438 | 29275 | 101550
+**Loops** | | |
+ForInLoopClazz | 23034 | 19567 | 11760
+ForInLoopInt | 25212 | 21913 | 11485
+ForLoopClazz | 14364 | 14932 | 8255
+ForLoopInt | 18794 | 15059 | 8121
+ForeachClazz | 19485 | 19637 | 9547
+ForeachInt | 22617 | 19940 | 9718
+WhileLoopClazz | 14147 | 15052 | 9206
+WhileLoopInt | 18878 | 15392 | 8609
+**Operator Overloading** | | |
+NoOperatorOverloading | 2159 | 11386 | 20551
+OperatorOverloading | 2139 | 10192 | 3036
+**String Concatenation** | | |
+StringConcatenationAdjacentLiteral | 650 | 615 | 1209
+StringConcatenationInterpolation | 126750 | 142857 | 1536
+StringConcatenationPlusOperator | 428000 | 655250 | 1550
+StringConcatenationPlusOperatorLiteral | 442000 | 656000 | 1211
+StringConcatenationStringBuffer | 446600 | 587750 | 161153
+**Typing** | | |
+StrongTyping | 28985 | 29676 | 94772
+WeakTyping | 29130 | 29970 | 100800
 
 
     
