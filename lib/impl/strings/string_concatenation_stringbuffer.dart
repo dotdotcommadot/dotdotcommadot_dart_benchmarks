@@ -5,14 +5,17 @@ class StringConcatenationStringBuffer extends BenchmarkBase
 	static const int ITERATIONS 	= 100000;
 	final String hello 						= 'Hello';
 	final String world 						= 'World';
+	String helloWorld;
 	StringBuffer stringBuffer;
 	
 	StringConcatenationStringBuffer() : super("StringConcatenationStringBuffer");
-	
+
+	@override
 	void setup() 
   { 
   }
-	
+
+	@override
 	void run() 
   {
     for (int i = 0; i < ITERATIONS; i++)
@@ -23,10 +26,11 @@ class StringConcatenationStringBuffer extends BenchmarkBase
     	stringBuffer.write(" ");
     	stringBuffer.write(world);
     	stringBuffer.write("...");
-    	var e = stringBuffer.toString();
+    	helloWorld = stringBuffer.toString();
     }
   }
 
+	@override
   void teardown() 
   { 
   }
