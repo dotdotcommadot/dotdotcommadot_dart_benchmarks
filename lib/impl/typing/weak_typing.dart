@@ -5,11 +5,13 @@ class WeakTyping extends BenchmarkBase
 	static const int ITERATIONS 	= 100000;
 	
 	WeakTyping() : super("WeakTyping");
-	
+
+  @override
 	void setup() 
   { 
   }
-	
+
+  @override
 	void run() 
   {
     for (int i = 0; i < ITERATIONS; i++)
@@ -19,6 +21,7 @@ class WeakTyping extends BenchmarkBase
     }
   }
 
+  @override
   void teardown() 
   { 
   }
